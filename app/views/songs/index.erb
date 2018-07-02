@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Galada|Montserrat" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="main-header"> Songs </h1>
+    <div class="songs-container">
+      <% @songs.each do |song| %>
+      <ul class="song-container">
+        <img src="vinyl.jpg" alt="Vinyl Photo by Adrian Korte" class='image'/>
+        <li><%= song.title %></li>
+        <li><%= song.length %> seconds</li>
+        <li>Play Count: <%= song.play_count %></li>
+      </ul>
+      <% end %>
+    </div>
+  </body>
+</html>
